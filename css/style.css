@@ -190,10 +190,20 @@ body::-webkit-scrollbar-track{
     z-index: 2;
 }
 
-.cartao.virar{
-    transform: rotatez(90deg);
+.cartao {
+    width: 300px;
+    height: 500px;
+    position: absolute;   /* garante que fica no mesmo lugar */
+    top: 0;
+    left: 0;
+    transform-origin: center center; /* gira no próprio centro */
     transition: transform 0.3s ease-in-out;
 }
+
+.cartao.virar {
+    transform: rotate(90deg) scale(1); /* só gira no lugar */
+}
+
 
 .esconder{
     display: none;
