@@ -1,4 +1,4 @@
-/* ---------- RESET ---------- */
+/* ---------- RESET BÁSICO ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -8,25 +8,24 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #000;
-  color: #000;
-  overflow: hidden;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-/* ---------- CABEÇALHO ---------- */
-.cabecalho {
+/* ---------- TÍTULO ---------- */
+.titulo {
   text-align: center;
   padding: 20px;
 }
 
-.titulo {
-  font-size: 2.2rem;
-  font-weight: bold;
+.titulo h1 {
+  font-size: 2rem;
   color: #fff;
-  text-shadow: 2px 2px 5px #000;
+  text-shadow: 2px 2px 6px #000;
 }
 
-/* ---------- SLIDER ---------- */
-.slider {
+/* ---------- CARROSSEL ---------- */
+.carrossel {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,11 +33,12 @@ body {
   height: 100vh;
 }
 
-.lista-personagens {
+/* ---------- LISTA DE CARTAS ---------- */
+.lista-cartas {
   list-style: none;
   position: relative;
-  width: 400px;
-  height: 560px;
+  width: 380px;
+  height: 540px;
 }
 
 /* ---------- CARTÃO ---------- */
@@ -47,102 +47,94 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 380px;
-  height: 540px;
+  width: 360px;
+  height: 520px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
   padding: 15px;
   display: none;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.3s ease-in-out;
 }
 
 .cartao.selecionado {
   display: flex;
 }
 
-/* ---------- FUNDOS ---------- */
+/* ---------- FUNDOS (alterar com suas imagens) ---------- */
 .fundo-1 {
-  background: url("../src/fundo-1.jpg") no-repeat center center/cover;
+  background: url("../src/fundos/fundo-1.jpg") no-repeat center center/cover;
 }
 
 .fundo-2 {
-  background: url("../src/fundo-2.jpg") no-repeat center center/cover;
+  background: url("../src/fundos/fundo-2.jpg") no-repeat center center/cover;
 }
 
 .fundo-3 {
-  background: url("../src/fundo-3.jpg") no-repeat center center/cover;
+  background: url("../src/fundos/fundo-3.jpg") no-repeat center center/cover;
 }
 
 .fundo-4 {
-  background: url("../src/fundo-4.jpg") no-repeat center center/cover;
+  background: url("../src/fundos/fundo-4.jpg") no-repeat center center/cover;
 }
 
 .fundo-5 {
-  background: url("../src/fundo-5.jpg") no-repeat center center/cover;
+  background: url("../src/fundos/fundo-5.jpg") no-repeat center center/cover;
 }
 
 .fundo-6 {
-  background: url("../src/fundo-6.jpg") no-repeat center center/cover;
-}
-
-.fundo-7 {
-  background: url("../src/fundo-7.jpg") no-repeat center center/cover;
+  background: url("../src/fundos/fundo-6.jpg") no-repeat center center/cover;
 }
 
 /* ---------- CONTEÚDO DO CARTÃO ---------- */
 .nome {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 8px;
   color: #fff;
-  text-shadow: 1px 1px 3px #000;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 4px #000;
 }
 
-.nivel-carta {
+/* Nível da carta */
+.nivel {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 10px;
 }
 
-.estrela::before {
-  content: "★";
-  color: orange;
-  font-size: 20px;
-  margin: 0 2px;
+.nivel img {
+  width: 22px;
+  margin: 1px;
 }
 
+/* Imagem central */
 .imagem-carta {
-  width: 220px;
-  border-radius: 8px;
+  width: 200px;
+  border-radius: 6px;
   margin: 10px 0;
   border: 2px solid #000;
 }
 
-.informacoes {
-  text-align: center;
-  font-size: 0.95rem;
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 8px;
-  padding: 10px;
-  margin-top: auto;
-  width: 90%;
-}
-
+/* Texto da carta */
 .descricao {
-  margin-bottom: 8px;
   font-size: 0.9rem;
+  text-align: center;
+  margin-top: auto;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 6px;
   color: #111;
 }
 
-.informacoes-ataque {
+/* ATK e DEF */
+.atk-def {
+  margin-top: 6px;
   font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-  font-size: 0.95rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
 }
 
 /* ---------- BOTÕES ---------- */
@@ -159,8 +151,9 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+  z-index: 10;
 }
 
 .btn-seta:hover {
@@ -168,16 +161,15 @@ body {
 }
 
 .btn-seta img {
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
 }
 
 .btn-voltar {
-  left: 8%;
+  left: 10%;
   transform: translateY(-50%) rotate(180deg);
 }
 
 .btn-avancar {
-  right: 8%;
+  right: 10%;
 }
-
