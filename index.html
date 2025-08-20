@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yu-Gi-Oh - Slider</title>
-  <link rel="stylesheet" href="./src/css/fontes.css">
-  <link rel="stylesheet" href="./src/css/reset.css">
-  <link rel="stylesheet" href="./src/css/style.css">
-  <link rel="stylesheet" href="./src/css/responsivo.css">
+  <title>Yu-Gi-Oh Cards</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/responsivo.css">
 </head>
 <body>
   <header class="cabecalho">
@@ -17,12 +15,13 @@
   <main>
     <section class="slider">
       <!-- Botão voltar -->
-      <button class="btn-seta btn-voltar" id="btn-voltar">
-        <img src="./src/imagens/seta.png" alt="seta voltar">
+      <button class="btn-seta btn-voltar">
+        <img src="src/imagens/seta.png" alt="Seta Voltar">
       </button>
 
-      <!-- Lista de cartas -->
+      <!-- Lista de personagens/cartas -->
       <ul class="lista-personagens">
+        <!-- CARTA 1 -->
         <li class="cartao fundo-1 selecionado">
           <h2 class="nome">Mago Negro</h2>
           <div class="nivel-carta">
@@ -34,9 +33,11 @@
             <span class="estrela"></span>
             <span class="estrela"></span>
           </div>
-          <img class="imagem-carta" src="./src/imagens/mago-negro.jpg" alt="Mago Negro">
+          <img src="src/imagens/mago-negro.jpg" alt="Mago Negro" class="imagem-carta">
           <div class="informacoes">
-            <p class="descricao">O mago mais poderoso em termos de ataque e defesa.</p>
+            <p class="descricao">
+              O mago mais poderoso em termos de ataque e defesa.
+            </p>
             <div class="informacoes-ataque">
               <span>ATK/2500</span>
               <span>DEF/2100</span>
@@ -44,6 +45,7 @@
           </div>
         </li>
 
+        <!-- CARTA 2 -->
         <li class="cartao fundo-2">
           <h2 class="nome">Dragão Branco de Olhos Azuis</h2>
           <div class="nivel-carta">
@@ -56,9 +58,11 @@
             <span class="estrela"></span>
             <span class="estrela"></span>
           </div>
-          <img class="imagem-carta" src="./src/imagens/dragao-branco.jpg" alt="Dragão Branco de Olhos Azuis">
+          <img src="src/imagens/dragao-branco.jpg" alt="Dragão Branco de Olhos Azuis" class="imagem-carta">
           <div class="informacoes">
-            <p class="descricao">Este lendário dragão é uma poderosa máquina de destruição.</p>
+            <p class="descricao">
+              Este lendário dragão é uma poderosa máquina de destruição.
+            </p>
             <div class="informacoes-ataque">
               <span>ATK/3000</span>
               <span>DEF/2500</span>
@@ -66,30 +70,34 @@
           </div>
         </li>
 
+        <!-- CARTA 3 -->
         <li class="cartao fundo-3">
           <h2 class="nome">Kuriboh</h2>
           <div class="nivel-carta">
             <span class="estrela"></span>
           </div>
-          <img class="imagem-carta" src="./src/imagens/kuriboh.jpg" alt="Kuriboh">
+          <img src="src/imagens/kuriboh.jpg" alt="Kuriboh" class="imagem-carta">
           <div class="informacoes">
-            <p class="descricao">Um pequeno monstro que pode salvar você de um ataque fatal.</p>
+            <p class="descricao">
+              Um pequeno monstro que pode salvar você de um ataque fatal.
+            </p>
             <div class="informacoes-ataque">
               <span>ATK/300</span>
               <span>DEF/200</span>
             </div>
           </div>
         </li>
+
+        <!-- Você pode adicionar mais cartas seguindo o mesmo modelo -->
       </ul>
 
       <!-- Botão avançar -->
-      <button class="btn-seta btn-avancar" id="btn-avancar">
-        <img src="./src/imagens/seta.png" alt="seta avançar">
+      <button class="btn-seta btn-avancar">
+        <img src="src/imagens/seta.png" alt="Seta Avançar">
       </button>
     </section>
   </main>
 
-  <script src="./src/js/index.js"></script>
+  <script src="src/js/index.js"></script>
 </body>
 </html>
-
