@@ -3,142 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yu-Gi-Oh - Coleção</title>
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/fontes.css">
-  <link rel="stylesheet" href="./css/responsivo.css">
+  <title>Clone Yu-Gi-Oh!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <div class="titulo">
-      <h1>Yu-Gi-Oh - Coleção</h1>
-    </div>
+  <!-- Título -->
+  <header class="titulo">
+    <h1>Clone Yu-Gi-Oh!</h1>
+  </header>
 
-    <div class="carrossel">
-      <button class="btn-seta btn-voltar" id="btn-voltar">
-        <img src="./src/imagens/seta.png" alt="Seta Voltar">
-      </button>
+  <!-- Carrossel -->
+  <main class="carrossel">
+    <!-- Botão voltar -->
+    <button class="btn-seta btn-voltar" id="btn-voltar">
+      <img src="./src/imagens/seta.png" alt="Seta Voltar">
+    </button>
 
-      <ul class="lista-cartas">
-        <!-- CARTÃO 1 -->
-        <li class="cartao selecionado fundo-1">
-          <h2 class="nome">MAGO NEGRO</h2>
-          <div class="nivel">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-          </div>
-          <img class="imagem-carta" src="./src/imagens/img.MagoNegro.png" alt="Mago Negro">
-          <p class="descricao">O mago mais poderoso em termos de ataque e defesa.</p>
-          <span class="atk-def">ATK/2500 DEF/2100</span>
-        </li>
+    <!-- Lista de cartas -->
+    <ul class="lista-cartas">
+      <!-- Carta 1 -->
+      <li class="cartao selecionado">
+        <h2 class="nome">MAGO NEGRO</h2>
+        <div class="nivel">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+        </div>
+        <img src="./src/imagens/MagoNegro.png" alt="Mago Negro" class="imagem-carta">
+        <p class="descricao">O mago mais poderoso em termos de ataque e defesa.</p>
+        <p class="atk-def">ATK/2500 DEF/2100</p>
+      </li>
 
-        <!-- CARTÃO 2 -->
-        <li class="cartao fundo-2">
-          <h2 class="nome">MAGO DO CAOS</h2>
-          <div class="nivel">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-          </div>
-          <img class="imagem-carta" src="./src/imagens/MagoCaos.png" alt="Mago do Caos">
-          <p class="descricao">Um mago lendário que manipula as energias do caos.</p>
-          <span class="atk-def">ATK/2800 DEF/2600</span>
-        </li>
+      <!-- Carta 2 -->
+      <li class="cartao">
+        <h2 class="nome">DRAGÃO BRANCO DE OLHOS AZUIS</h2>
+        <div class="nivel">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+        </div>
+        <img src="./src/imagens/dragaoBranco.png" alt="Dragão Branco de Olhos Azuis" class="imagem-carta">
+        <p class="descricao">Um dragão lendário com um poder destrutivo incomparável.</p>
+        <p class="atk-def">ATK/3000 DEF/2500</p>
+      </li>
 
-        <!-- CARTÃO 3 -->
-        <li class="cartao fundo-3">
-          <h2 class="nome">DRAGÃO BRANCO DE OLHOS AZUIS</h2>
-          <div class="nivel">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-          </div>
-          <img class="imagem-carta" src="./src/imagens/DragaoAtualizado.png" alt="Dragão Branco de Olhos Azuis">
-          <p class="descricao">Um dragão lendário que inspira medo e respeito em todos.</p>
-          <span class="atk-def">ATK/3000 DEF/2500</span>
-        </li>
+      <!-- Carta 3 -->
+      <li class="cartao">
+        <h2 class="nome">OBELISCO, O ATORMENTADOR</h2>
+        <div class="nivel">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+          <img src="./src/imagens/nivel-carta.png" alt="nível">
+        </div>
+        <img src="./src/imagens/Obelisco.png" alt="Obelisco" class="imagem-carta">
+        <p class="descricao">Um dos deuses egípcios, com poder divino esmagador.</p>
+        <p class="atk-def">ATK/4000 DEF/4000</p>
+      </li>
+    </ul>
 
-        <!-- CARTÃO 4 -->
-        <li class="cartao fundo-4">
-          <h2 class="nome">SLIFER, O DRAGÃO CELESTE</h2>
-          <div class="nivel">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-          </div>
-          <img class="imagem-carta" src="./src/imagens/sliferimg.png" alt="Slifer">
-          <p class="descricao">Uma divindade egípcia que destrói seus inimigos com raios celestes.</p>
-          <span class="atk-def">ATK/? DEF/?</span>
-        </li>
-
-        <!-- CARTÃO 5 -->
-        <li class="cartao fundo-5">
-          <h2 class="nome">OBELISCO, O ATORMENTADOR</h2>
-          <div class="nivel">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-          </div>
-          <img class="imagem-carta" src="./src/imagens/Oblisco.png
-" alt="Obelisco">
-          <p class="descricao">Um deus egípcio que esmaga tudo com seu poder absoluto.</p>
-          <span class="atk-def">ATK/4000 DEF/4000</span>
-        </li>
-
-        <!-- CARTÃO 6 -->
-        <li class="cartao fundo-6">
-          <h2 class="nome">DRAGÃO ALADO DE RÁ</h2>
-          <div class="nivel">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-            <img src="./src/imagens/nivel-carta.png" alt="nível">
-          </div>
-          <img class="imagem-carta" src="./src/imagens/dragaoAladoDeRa.png" alt="Dragão Alado de Rá">
-          <p class="descricao">Um dos deuses egípcios que traz a chama eterna do sol.</p>
-          <span class="atk-def">ATK/? DEF/?</span>
-        </li>
-      </ul>
-
-      <button class="btn-seta btn-avancar" id="btn-avancar">
-        <img src="./src/imagens/seta.png" alt="Seta Avançar">
-      </button>
-    </div>
+    <!-- Botão avançar -->
+    <button class="btn-seta btn-avancar" id="btn-avancar">
+      <img src="./src/imagens/seta.png" alt="Seta Avançar">
+    </button>
   </main>
 
-  <script src="./js/index.js"></script>
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
