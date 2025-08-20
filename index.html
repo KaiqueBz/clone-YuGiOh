@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yu-Gi-Oh - Slider</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/fontes.css">
+  <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsivo.css">
 </head>
 <body>
   <header class="cabecalho">
@@ -20,107 +24,60 @@
 
       <!-- Lista de cartas -->
       <ul class="lista-personagens">
-        <!-- Carta 1 -->
-        <li class="cartao selecionado">
-          <div class="carta-inner">
-            <div class="carta-front">
-              <h2 class="nome">Mago Negro</h2>
-              <div class="nivel-carta">
-                <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span>
-                <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span><span class="estrela"></span>
-              </div>
-              <img class="imagem-carta" src="./src/imagens/mago-negro.jpg" alt="Mago Negro">
-              <div class="informacoes">
-                <p class="descricao">O mago mais poderoso em termos de ataque e defesa.</p>
-                <div class="informacoes-ataque"><span>ATK/2500</span> <span>DEF/2100</span></div>
-              </div>
-            </div>
-            <div class="carta-back">
-              <img src="./src/imagens/fundo-carta.jpg" alt="Fundo da carta Yu-Gi-Oh">
+        <li class="cartao fundo-1 selecionado">
+          <h2 class="nome">Mago Negro</h2>
+          <div class="nivel-carta">
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+          </div>
+          <img class="imagem-carta" src="./src/imagens/mago-negro.jpg" alt="Mago Negro">
+          <div class="informacoes">
+            <p class="descricao">O mago mais poderoso em termos de ataque e defesa.</p>
+            <div class="informacoes-ataque">
+              <span>ATK/2500</span>
+              <span>DEF/2100</span>
             </div>
           </div>
         </li>
 
-        <!-- Carta 2 -->
-        <li class="cartao">
-          <div class="carta-inner">
-            <div class="carta-front">
-              <h2 class="nome">Dragão Branco de Olhos Azuis</h2>
-              <div class="nivel-carta">
-                <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span>
-                <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span>
-                <span class="estrela"></span><span class="estrela"></span>
-              </div>
-              <img class="imagem-carta" src="./src/imagens/dragao-branco.jpg" alt="Dragão Branco de Olhos Azuis">
-              <div class="informacoes">
-                <p class="descricao">Este lendário dragão é uma poderosa máquina de destruição.</p>
-                <div class="informacoes-ataque"><span>ATK/3000</span> <span>DEF/2500</span></div>
-              </div>
-            </div>
-            <div class="carta-back">
-              <img src="./src/imagens/fundo-carta.jpg" alt="Fundo da carta Yu-Gi-Oh">
+        <li class="cartao fundo-2">
+          <h2 class="nome">Dragão Branco de Olhos Azuis</h2>
+          <div class="nivel-carta">
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+          </div>
+          <img class="imagem-carta" src="./src/imagens/dragao-branco.jpg" alt="Dragão Branco de Olhos Azuis">
+          <div class="informacoes">
+            <p class="descricao">Este lendário dragão é uma poderosa máquina de destruição.</p>
+            <div class="informacoes-ataque">
+              <span>ATK/3000</span>
+              <span>DEF/2500</span>
             </div>
           </div>
         </li>
 
-        <!-- Carta 3 -->
-        <li class="cartao">
-          <div class="carta-inner">
-            <div class="carta-front">
-              <h2 class="nome">Kuriboh</h2>
-              <div class="nivel-carta"><span class="estrela"></span></div>
-              <img class="imagem-carta" src="./src/imagens/kuriboh.jpg" alt="Kuriboh">
-              <div class="informacoes">
-                <p class="descricao">Um pequeno monstro que pode salvar você de um ataque fatal.</p>
-                <div class="informacoes-ataque"><span>ATK/300</span> <span>DEF/200</span></div>
-              </div>
-            </div>
-            <div class="carta-back">
-              <img src="./src/imagens/fundo-carta.jpg" alt="Fundo da carta Yu-Gi-Oh">
-            </div>
+        <li class="cartao fundo-3">
+          <h2 class="nome">Kuriboh</h2>
+          <div class="nivel-carta">
+            <span class="estrela"></span>
           </div>
-        </li>
-
-        <!-- Carta 4 -->
-        <li class="cartao">
-          <div class="carta-inner">
-            <div class="carta-front">
-              <h2 class="nome">Exodia, o Proibido</h2>
-              <div class="nivel-carta">
-                <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span>
-                <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span>
-                <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span>
-              </div>
-              <img class="imagem-carta" src="./src/imagens/exodia.jpg" alt="Exodia">
-              <div class="informacoes">
-                <p class="descricao">Se os cinco cards de Exodia estiverem juntos, o duelo é vencido automaticamente.</p>
-                <div class="informacoes-ataque"><span>ATK/1000</span> <span>DEF/1000</span></div>
-              </div>
-            </div>
-            <div class="carta-back">
-              <img src="./src/imagens/fundo-carta.jpg" alt="Fundo da carta Yu-Gi-Oh">
-            </div>
-          </div>
-        </li>
-
-        <!-- Carta 5 -->
-        <li class="cartao">
-          <div class="carta-inner">
-            <div class="carta-front">
-              <h2 class="nome">Dragão Negro de Olhos Vermelhos</h2>
-              <div class="nivel-carta">
-                <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span>
-                <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span>
-                <span class="estrela"></span>
-              </div>
-              <img class="imagem-carta" src="./src/imagens/dragao-negro.jpg" alt="Dragão Negro de Olhos Vermelhos">
-              <div class="informacoes">
-                <p class="descricao">Um dragão feroz com ataques devastadores.</p>
-                <div class="informacoes-ataque"><span>ATK/2400</span> <span>DEF/2000</span></div>
-              </div>
-            </div>
-            <div class="carta-back">
-              <img src="./src/imagens/fundo-carta.jpg" alt="Fundo da carta Yu-Gi-Oh">
+          <img class="imagem-carta" src="./src/imagens/kuriboh.jpg" alt="Kuriboh">
+          <div class="informacoes">
+            <p class="descricao">Um pequeno monstro que pode salvar você de um ataque fatal.</p>
+            <div class="informacoes-ataque">
+              <span>ATK/300</span>
+              <span>DEF/200</span>
             </div>
           </div>
         </li>
@@ -133,7 +90,11 @@
     </section>
   </main>
 
+  <!-- JS -->
   <script src="./js/index.js"></script>
+</body>
+</html>
+
 </body>
 </html>
 
