@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yu-Gi-Oh Cards</title>
-  <link rel="stylesheet" href="src/css/style.css">
-  <link rel="stylesheet" href="src/css/responsivo.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fontes.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
 </head>
 <body>
   <header class="cabecalho">
@@ -16,11 +19,12 @@
     <section class="slider">
       <!-- Botão voltar -->
       <button class="btn-seta btn-voltar">
-        <img src="src/imagens/seta.png" alt="Seta Voltar">
+        <img src="imagens/seta.png" alt="Seta Voltar">
       </button>
 
       <!-- Lista de personagens/cartas -->
       <ul class="lista-personagens">
+        
         <!-- CARTA 1 -->
         <li class="cartao fundo-1 selecionado">
           <h2 class="nome">Mago Negro</h2>
@@ -33,11 +37,9 @@
             <span class="estrela"></span>
             <span class="estrela"></span>
           </div>
-          <img src="src/imagens/mago-negro.jpg" alt="Mago Negro" class="imagem-carta">
+          <img src="imagens/mago-negro.jpg" alt="Mago Negro" class="imagem-carta">
           <div class="informacoes">
-            <p class="descricao">
-              O mago mais poderoso em termos de ataque e defesa.
-            </p>
+            <p class="descricao">O mago mais poderoso em termos de ataque e defesa.</p>
             <div class="informacoes-ataque">
               <span>ATK/2500</span>
               <span>DEF/2100</span>
@@ -58,11 +60,9 @@
             <span class="estrela"></span>
             <span class="estrela"></span>
           </div>
-          <img src="src/imagens/dragao-branco.jpg" alt="Dragão Branco de Olhos Azuis" class="imagem-carta">
+          <img src="imagens/dragao-branco.jpg" alt="Dragão Branco de Olhos Azuis" class="imagem-carta">
           <div class="informacoes">
-            <p class="descricao">
-              Este lendário dragão é uma poderosa máquina de destruição.
-            </p>
+            <p class="descricao">Este lendário dragão é uma poderosa máquina de destruição.</p>
             <div class="informacoes-ataque">
               <span>ATK/3000</span>
               <span>DEF/2500</span>
@@ -76,11 +76,9 @@
           <div class="nivel-carta">
             <span class="estrela"></span>
           </div>
-          <img src="src/imagens/kuriboh.jpg" alt="Kuriboh" class="imagem-carta">
+          <img src="imagens/kuriboh.jpg" alt="Kuriboh" class="imagem-carta">
           <div class="informacoes">
-            <p class="descricao">
-              Um pequeno monstro que pode salvar você de um ataque fatal.
-            </p>
+            <p class="descricao">Um pequeno monstro que pode salvar você de um ataque fatal.</p>
             <div class="informacoes-ataque">
               <span>ATK/300</span>
               <span>DEF/200</span>
@@ -88,16 +86,99 @@
           </div>
         </li>
 
-        <!-- Você pode adicionar mais cartas seguindo o mesmo modelo -->
+        <!-- CARTA 4 -->
+        <li class="cartao fundo-4">
+          <h2 class="nome">Mago do Tempo</h2>
+          <div class="nivel-carta">
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+          </div>
+          <img src="imagens/mago-do-tempo.jpg" alt="Mago do Tempo" class="imagem-carta">
+          <div class="informacoes">
+            <p class="descricao">Com um giro de moeda, pode mudar completamente o rumo da batalha.</p>
+            <div class="informacoes-ataque">
+              <span>ATK/500</span>
+              <span>DEF/400</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- CARTA 5 -->
+        <li class="cartao fundo-5">
+          <h2 class="nome">Exodia, o Proibido</h2>
+          <div class="nivel-carta">
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+          </div>
+          <img src="imagens/exodia.jpg" alt="Exodia, o Proibido" class="imagem-carta">
+          <div class="informacoes">
+            <p class="descricao">Quando todas as cinco peças estão reunidas, o duelo é automaticamente vencido.</p>
+            <div class="informacoes-ataque">
+              <span>ATK/1000</span>
+              <span>DEF/1000</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- CARTA 6 -->
+        <li class="cartao fundo-6">
+          <h2 class="nome">Mago Negro do Caos</h2>
+          <div class="nivel-carta">
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+          </div>
+          <img src="imagens/mago-do-caos.jpg" alt="Mago Negro do Caos" class="imagem-carta">
+          <div class="informacoes">
+            <p class="descricao">Um mago poderoso que pode invocar forças sombrias devastadoras.</p>
+            <div class="informacoes-ataque">
+              <span>ATK/2800</span>
+              <span>DEF/2600</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- CARTA 7 -->
+        <li class="cartao fundo-7">
+          <h2 class="nome">Dragão Negro de Olhos Vermelhos</h2>
+          <div class="nivel-carta">
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+            <span class="estrela"></span>
+          </div>
+          <img src="imagens/dragao-vermelho.jpg" alt="Dragão Negro de Olhos Vermelhos" class="imagem-carta">
+          <div class="informacoes">
+            <p class="descricao">Um dragão temível que rivaliza com o Dragão Branco em poder.</p>
+            <div class="informacoes-ataque">
+              <span>ATK/2400</span>
+              <span>DEF/2000</span>
+            </div>
+          </div>
+        </li>
+
       </ul>
 
       <!-- Botão avançar -->
       <button class="btn-seta btn-avancar">
-        <img src="src/imagens/seta.png" alt="Seta Avançar">
+        <img src="imagens/seta.png" alt="Seta Avançar">
       </button>
     </section>
   </main>
 
-  <script src="src/js/index.js"></script>
+  <!-- JS -->
+  <script src="js/index.js"></script>
 </body>
 </html>
+
