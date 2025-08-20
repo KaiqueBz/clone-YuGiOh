@@ -1,41 +1,34 @@
-const btnAvancar = document.getElementById("btn-avancar");
-const btnvoltar = document.getElementById("btn-voltar");
+// Seleciona os elementos necessários
+const btnAvancar = document.querySelector(".btn-avancar");
+const btnVoltar = document.querySelector(".btn-voltar");
 const cartoes = document.querySelectorAll(".cartao");
-let cartaoAtual = 0;
 
-cartoes.forEach(cartao => {
-    cartao.addEventListener("click", function(){
-        const cartaVirada = cartao.querySelector(".carta-virada");
+let cartaoAtual = 0; // começa na primeira carta
 
-        //virar o cartão
-        cartao.classList.toggle("virar");
-        //mostrar fundo da carta
-        cartaVirada.classList.toggle("mostrar-fundo-carta");
-        
+// Função para esconder o cartão selecionado
+function esconderCartaoSelecionado() {
+  const cartaoSelecionado = document.querySelector(".selecionado");
+  cartaoSelecionado.classList.remove("selecionado");
+}
 
-        const descricao = cartao.querySelector(".descricao");
-        descricao.classList.toggle("esconder");
-    });
+// Função para mostrar o cartão na posição correta
+function mostrarCartao(indiceCartao) {
+  cartoes[indiceCartao].classList.add("selecionado");
+}
+
+// Evento botão avançar
+btnAvancar.addEventListener("click", function () {
+  if (cartaoAtual === cartoes.length - 1) return; // já está no último
+  esconderCartaoSelecionado();
+  cartaoAtual++;
+  mostrarCartao(cartaoAtual);
 });
 
-
-btnAvancar.addEventListener("click", function(){
-    if(cartaoAtual === cartoes.length -1)return;
-
-    const cartaoSelecionado = document.querySelector(".selecionado");
-    cartaoSelecionado.classList.remove("selecionado");
-
-    cartaoAtual++
-    cartoes[cartaoAtual].classList.add("selecionado");
-});
-
-btnvoltar.addEventListener("click", function(){
-    if(cartaoAtual === 0)return;
-
-    const cartaoSelecionado = document.querySelector(".selecionado");
-    cartaoSelecionado.classList.remove("selecionado");
-
-    cartaoAtual--;
-    cartoes[cartaoAtual].classList.add("selecionado");
+// Evento botão voltar
+btnVoltar.addEventListener("click", function () {
+  if (cartaoAtual === 0) return; // já está no primeiro
+  esconderCartaoSelecionado();
+  cartaoAtual--;
+  mostrarCartao(cartaoAtual);
 });
 
