@@ -1,170 +1,168 @@
+/* ---------- RESET BÁSICO ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Yugioh, serif';
-  background-image: url(../src/imagens/yugiohimg.webp);
-  background-repeat: no-repeat;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url("../src/imagens/yugiohimg.webp") no-repeat center center fixed;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  color: #fff;
+  overflow-x: hidden;
   min-height: 100vh;
-  gap: 30px;
 }
 
+/* ---------- TÍTULO ---------- */
 .cabecalho {
+  text-align: center;
+  padding: 20px;
+}
+
+.titulo {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 6px #000;
+}
+
+/* ---------- SLIDER ---------- */
+.slider {
   display: flex;
+  align-items: center;
   justify-content: center;
+  position: relative;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-.cabecalho .titulo {
-  color: #000000;
+/* ---------- LISTA DE CARTAS ---------- */
+.lista-personagens {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  margin: 0 auto;
+  perspective: 1000px; /* Habilita efeito 3D */
+  list-style: none;
 }
 
+/* ---------- CARTÃO ---------- */
 .cartao {
-  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: rgba(245, 222, 179, 0.95); /* tom bege estilo carta Yu-Gi-Oh */
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  padding: 12px;
-  gap: 5px;
-  position: absolute;
+  align-items: center;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.7);
+  border: 2px solid #000;
+
+  /* animação de virar */
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  opacity: 0;
 }
 
 .cartao.selecionado {
+  transform: rotateY(0deg);
   opacity: 1;
   z-index: 1;
 }
 
-.lista-personagens {
-  width: 300px;
-  height: 500px;
-  border-radius: 10px;
-  position: relative;
-  padding: 12px;
+/* ---------- CONTEÚDO DO CARTÃO ---------- */
+.nome {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 8px;
+  text-align: center;
 }
 
-.slider {
+.nivel-carta {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 130px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
-.cartao .nome {
-  font-size: 13px;
-  padding: 5px;
-  text-transform: uppercase;
-  background: radial-gradient(circle, #f3e2c8, #e4cfa5, #c4a57a);
-  border: 2px solid #a67c52;
-  line-height: 1.5;
-  border-radius: 4px;
-}
-
-.cartao .estrela {
+.nivel-carta .estrela {
   width: 20px;
   height: 20px;
-  background-image: url(../src/imagens/nivel-carta.png);
+  background: url("../src/imagens/estrela.png") no-repeat center;
   background-size: contain;
-  background-repeat: no-repeat;
-  display: inline-block;
+  margin: 1px;
 }
 
-.cartao .nivel-carta {
+/* Imagem central da carta */
+.imagem-carta {
+  width: 200px;
+  border-radius: 6px;
+  margin: 10px 0;
+  border: 2px solid #000;
+}
+
+/* Texto da carta */
+.informacoes {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.descricao {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 6px;
+  color: #111;
+  font-style: italic;
+}
+
+/* ATK e DEF */
+.informacoes-ataque {
+  font-weight: bold;
+  color: #000;
+  text-shadow: 1px 1px 2px #fff;
   display: flex;
-  justify-content: flex-end;
-  margin-right: 10px;
-  gap: 5px;
+  justify-content: space-around;
 }
 
-.cartao .imagem-carta {
-  max-width: 260px;
-  align-self: center;
-  border-radius: 5px;
-}
-
-.cartao .informacoes {
-  border-radius: 5px;
-  max-width: 300px;
-  color: #000000;
-  background: radial-gradient(circle, #f3e2c8, #e4cfa5, #c4a57a);
-  border: 2px solid #a67c52;
-  text-align: left;
-  line-height: 1.5;
-  padding: 5px;
-}
-
-.cartao .informacoes .informacoes-ataque {
-  display: flex;
-  justify-content: flex-end;
-  gap: 5px;
-  padding: 10px;
-}
-
-.cartao .informacoes .informacoes-ataque span {
-  font-size: 13px;
-}
-
-.cartao .informacoes .descricao {
-  border-bottom: 1px solid #000000;
-  padding: 10px;
-  max-height: 95px;
-  overflow-y: scroll;
-  font-size: 13px;
-}
-
-.fundo-1 { background: url(../src/imagens/fundo-1.jpg) no-repeat; }
-.fundo-2 { background: url(../src/imagens/fundo-2.jpg) no-repeat; }
-.fundo-3 { background: url(../src/imagens/fundo-1.jpg) no-repeat; }
-.fundo-4 { background: url(../src/imagens/fundo-3.jpg) no-repeat; }
-.fundo-5 { background: url(../src/imagens/fundo-5.jpg) no-repeat; }
-.fundo-6 { background: url(../src/imagens/fundo-6.jpg) no-repeat; }
-.fundo-7 { background: url(../src/imagens/fundo-7.jpg) no-repeat; }
-
+/* ---------- BOTÕES ---------- */
 .btn-seta {
-  background-color: #ffff;
-  width: 70px;
-  height: 70px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50px;
-  border: 0;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
-}
-
-.btn-seta.btn-voltar {
-  transform: rotateY(180deg);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+  z-index: 10;
 }
 
 .btn-seta:hover {
-  background-color: #8351fe;
+  transform: translateY(-50%) scale(1.1);
 }
 
-body::-webkit-scrollbar-track { background-color: #c08057; }
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-thumb { background: #c08057; border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: #c08057; }
-
-.carta-virada { display: none; }
-
-.carta-virada.mostrar-fundo-carta {
-  background-color: red;
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background-image: url(../src/imagens/fundo-carta.jpg);
-  background-size: contain;
-  background-position: center;
-  top: 0;
-  left: 0;
-  border-radius: 10px;
-  z-index: 2;
+.btn-seta img {
+  width: 24px;
+  height: 24px;
 }
 
-.cartao.virar {
-  transform: rotatez(90deg);
-  transition: transform 0.3s ease-in-out;
+.btn-voltar {
+  left: -70px;
 }
 
-.esconder { display: none; }
+.btn-avancar {
+  right: -70px;
+}
