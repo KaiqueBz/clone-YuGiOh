@@ -1,38 +1,27 @@
-// Seleciona os elementos principais
-const btnAvancar = document.getElementById("btn-avancar");
-const btnVoltar = document.getElementById("btn-voltar");
-const cartoes = document.querySelectorAll(".cartao");
+document.addEventListener("DOMContentLoaded", () => {
+  const btnAvancar = document.getElementById("btn-avancar");
+  const btnVoltar  = document.getElementById("btn-voltar");
+  const cartoes    = Array.from(document.querySelectorAll(".lista-personagens .cartao"));
 
-let cartaoAtual = 0;
+  if (!btnAvancar || !btnVoltar || cartoes.length === 0) {
+    console.error("Setup inválido: confira os IDs dos botões e se existem .cartao dentro de .lista-personagens.");
+    return;
+  }
 
-// Função para esconder o cartão selecionado
-function esconderCartaoSelecionado() {
-  const cartaoSelecionado = document.querySelector(".cartao.selecionado");
-  cartaoSelecionado.classList.remove("selecionado");
-}
+  // Tenta achar o que já vem como .selecionado no HTML
+  let cartaoAtual = cartoes.findIndex(c => c.classList.contains("selecionado"));
+  if (cartaoAtual < 0) {
+    cartaoAtual = 0;
+    cartoes[0].classList.add("selecionado");
+  }
 
-// Função para mostrar o cartão
-function mostrarCartao(indiceCartao) {
-  cartoes[indiceCartao].classList.add("selecionado");
-}
+  function selecionar(indiceNovo) {
+    cartoes[cartaoAtual].classList.remove("selecionado");
+    // loop infinito (vai do último para o primeiro e vice-versa)
+    cartaoAtual = (indiceNovo + cartoes.length) % cartoes.length;
+    cartoes[cartaoAtual].classList.add("selecionado");
+  }
 
-// Avançar
-btnAvancar.addEventListener("click", function () {
-  if (cartaoAtual === cartoes.length - 1) return;
-
-  esconderCartaoSelecionado();
-
-  cartaoAtual++;
-  mostrarCartao(cartaoAtual);
+  btnAvancar.addEventListener("click", () => selecionar(cartaoAtual + 1));
+  btnVoltar .addEventListener("click", () => selecionar(cartaoAtual - 1));
 });
-
-// Voltar
-btnVoltar.addEventListener("click", function () {
-  if (cartaoAtual === 0) return;
-
-  esconderCartaoSelecionado();
-
-  cartaoAtual--;
-  mostrarCartao(cartaoAtual);
-});
-
