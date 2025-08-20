@@ -191,17 +191,20 @@ body::-webkit-scrollbar-track{
 }
 
 .cartao {
-    width: 300px;
-    height: 500px;
-    position: absolute;   /* garante que fica no mesmo lugar */
-    top: 0;
-    left: 0;
-    transform-origin: center center; /* gira no próprio centro */
-    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;   /* gira pelo centro */
+    transition: transform 0.6s ease-in-out; /* transição mais suave */
+    backface-visibility: hidden;       /* esconde o verso quando vira */
+    perspective: 1000px;               /* dá profundidade no giro */
 }
 
 .cartao.virar {
-    transform: rotate(90deg) scale(1); /* só gira no lugar */
+    transform: rotate(90deg); /* deita como modo de defesa */
+}
+.cartao .imagem-carta {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.6s ease-in-out;
 }
 
 
