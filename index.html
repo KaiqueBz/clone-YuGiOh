@@ -1,95 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yu-Gi-Oh - Slider</title>
-  <link rel="stylesheet" href="./css/fontes.css">
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/responsivo.css">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clone Yu-Gi-Oh</title>
+
+  <!-- CSS (mesma ordem que você usou) -->
+  <link rel="stylesheet" href="./css/fontes.css" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/responsivo.css" />
 </head>
+
 <body>
   <header class="cabecalho">
-    <h1 class="titulo">Yu-Gi-Oh - Coleção</h1>
+    <h1 class="titulo">Clone Yu-Gi-Oh!</h1>
   </header>
 
-  <main>
-    <section class="slider">
-      <!-- Botão voltar -->
-      <button class="btn-seta btn-voltar" id="btn-voltar">
-        <img src="./src/imagens/seta.png" alt="seta voltar">
-      </button>
+  <main class="slider">
+    <button class="btn-seta btn-voltar" id="btn-voltar">
+      <img src="./src/imagens/seta.png" alt="seta voltar" />
+    </button>
 
-      <!-- Lista de cartas -->
-      <ul class="lista-personagens">
-        <li class="cartao fundo-1 selecionado">
-          <h2 class="nome">Mago Negro</h2>
-          <div class="nivel-carta">
-            <span class="estrela"></span>
-            <span class="estrela"></span>
-            <span class="estrela"></span>
-            <span class="estrela"></span>
-            <span class="estrela"></span>
-            <span class="estrela"></span>
-            <span class="estrela"></span>
-          </div>
-          <img class="imagem-carta" src="./src/imagens/mago-negro.jpg" alt="Mago Negro">
-          <div class="informacoes">
-            <p class="descricao">O mago mais poderoso em termos de ataque e defesa.</p>
-            <div class="informacoes-ataque">
-              <span>ATK/2500</span>
-              <span>DEF/2100</span>
-            </div>
-          </div>
-        </li>
+    <ul class="lista-personagens">
+      <!-- 1 -->
+      <li class="cartao fundo-1 selecionado">
+        <div class="carta-virada"></div>
+        <h2 class="nome">Mago Negro</h2>
 
-        <li class="cartao fundo-2">
-          <h2 class="nome">Dragão Branco de Olhos Azuis</h2>
-          <div class="nivel-carta">
-            <span class="estrela"></span>
-            <span class="estrela"></span>
-            <span class="estrela"></span>
-            <span class="estrela"></span>
-            <span class="estrela"></span>
-            <span class="estrela"></span>
-            <span class="estrela"></span>
-            <span class="estrela"></span>
-          </div>
-          <img class="imagem-carta" src="./src/imagens/dragao-branco.jpg" alt="Dragão Branco de Olhos Azuis">
-          <div class="informacoes">
-            <p class="descricao">Este lendário dragão é uma poderosa máquina de destruição.</p>
-            <div class="informacoes-ataque">
-              <span>ATK/3000</span>
-              <span>DEF/2500</span>
-            </div>
-          </div>
-        </li>
+        <div class="nivel-carta">
+          <span class="estrela"></span>
+          <span class="estrela"></span>
+          <span class="estrela"></span>
+          <span class="estrela"></span>
+          <span class="estrela"></span>
+          <span class="estrela"></span>
+          <span class="estrela"></span>
+        </div>
 
-        <li class="cartao fundo-3">
-          <h2 class="nome">Kuriboh</h2>
-          <div class="nivel-carta">
-            <span class="estrela"></span>
-          </div>
-          <img class="imagem-carta" src="./src/imagens/kuriboh.jpg" alt="Kuriboh">
-          <div class="informacoes">
-            <p class="descricao">Um pequeno monstro que pode salvar você de um ataque fatal.</p>
-            <div class="informacoes-ataque">
-              <span>ATK/300</span>
-              <span>DEF/200</span>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <img src="./src/imagens/img.MagoNegro.png" alt="Mago Negro" class="imagem-carta" />
 
-      <!-- Botão avançar -->
-      <button class="btn-seta btn-avancar" id="btn-avancar">
-        <img src="./src/imagens/seta.png" alt="seta avançar">
-      </button>
-    </section>
+        <div class="informacoes">
+          <p class="descricao">
+            Este lendário mago é habilidoso em ataques e feitiços. Como o maior mestre das artes mágicas, sua força
+            reside tanto no poder quanto na estratégia que ele traz para o campo de batalha.
+          </p>
+          <div class="informacoes-ataque">
+            <span>ATK/ 2500</span>
+            <span>DEF/ 2100</span>
+          </div>
+        </div>
+      </li>
+
+      <!-- 2 -->
+      <li class="cartao fundo-2">
+        <div class="carta-virada"></div>
+        <h2 class="nome">Dragão branco de olhos azuis</h2>
+
+        <div class="nivel-carta">
+          <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span>
+          <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span>
+          <span class="estrela"></span><span class="estrela"></span>
+        </div>
+
+        <img src="./src/imagens/DragaoAtualizado.png" alt="Dragão branco de olhos azuis" class="imagem-carta" />
+
+        <div class="informacoes">
+          <p class="descricao">
+            Este dragão lendário é uma criatura de poder incomparável, símbolo de força e majestade. Com um ataque
+            devastador, ele é o pesadelo de qualquer oponente. Seus olhos brilhantes e sua presença imponente intimidam
+            até os duelistas mais experientes.
+          </p>
+          <div class="informacoes-ataque">
+            <span>ATK/ 3000</span>
+            <span>DEF/ 2500</span>
+          </div>
+        </div>
+      </li>
+
+      <!-- 3 -->
+      <li class="cartao fundo-3">
+        <div class="carta-virada"></div>
+        <h2 class="nome">O Dragão Alado de Rá</h2>
+
+        <div class="nivel-carta">
+          <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span><span
+            class="estrela"></span><span class="estrela"></span><span class="estrela"></span><span
+            class="estrela"></span><span class="estrela"></span><span class="estrela"></span><span
+            class="estrela"></span>
+        </div>
+
+        <img src="./src/imagens/dragaoAladoDeRa.png" alt="O Dragão Alado de Rá" class="imagem-carta" />
+
+        <div class="informacoes">
+          <p class="descricao">
+            Esta carta não pode ser Invocada por Invocação-Especial. Para Invocar este card, você deve oferecer como
+            Tributo 3 monstros no seu lado do campo. O ATK e a DEF desta carta tornam-se iguais ao total dos ATK e DEF
+            dos monstros oferecidos como Tributo para sua Invocação. Você pode pagar 1000 LP para destruir 1 monstro no
+            campo. Você também pode pagar todos os seus LP, exceto 100, para aumentar o ATK/DEF desta carta pela
+            quantidade de LP pagos.
+          </p>
+          <div class="informacoes-ataque">
+            <span>ATK/ ?</span>
+            <span>DEF/ ?</span>
+          </div>
+        </div>
+      </li>
+
+      <!-- 4 -->
+      <li class="cartao fundo-4">
+        <div class="carta-virada"></div>
+        <h2 class="nome">Obelisco, o Atormentador</h2>
+
+        <div class="nivel-carta">
+          <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span><span
+            class="estrela"></span><span class="estrela"></span><span class="estrela"></span><span
+            class="estrela"></span><span class="estrela"></span><span class="estrela"></span><span
+            class="estrela"></span>
+        </div>
+
+        <img src="./src/imagens/Oblisco.png" alt="Obelisco o Atormentador" class="imagem-carta" />
+
+        <div class="informacoes">
+          <p class="descricao">
+            Requer 3 Tributos para ser Invocado por Invocação-Normal (não pode ser Baixado). Não pode ser Invocado por
+            Invocação-Especial. Nenhum jogador pode ativar cards ou efeitos em resposta à ativação deste card. Você pode
+            oferecer como Tributo 2 monstros para destruir todos os monstros que seu oponente controla. Este card não
+            pode ser escolhido como alvo de efeitos de card e é destruído durante a Fase Final do turno em que foi
+            Invocado por Invocação-Normal.
+          </p>
+          <div class="informacoes-ataque">
+            <span>ATK/ 4000</span>
+            <span>DEF/ 4000</span>
+          </div>
+        </div>
+      </li>
+
+      <!-- 5 -->
+      <li class="cartao fundo-5">
+        <div class="carta-virada"></div>
+        <h2 class="nome">Slifer, o Dragão Celeste</h2>
+
+        <div class="nivel-carta">
+          <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span><span
+            class="estrela"></span><span class="estrela"></span><span class="estrela"></span><span
+            class="estrela"></span><span class="estrela"></span><span class="estrela"></span><span
+            class="estrela"></span>
+        </div>
+
+        <img src="./src/imagens/sliferimg.png" alt="Slifer, o Dragão Celeste" class="imagem-carta" />
+
+        <div class="informacoes">
+          <p class="descricao">
+            Requer 3 Tributos para ser Invocado por Invocação-Normal (não pode ser Baixado). Não pode ser Invocado por
+            Invocação-Especial. O ATK e a DEF deste card são iguais ao número de cards na sua mão x 1000. Se um monstro
+            for Invocado no lado do campo do seu oponente em Posição de Ataque: Esse monstro perde 2000 de ATK e, se o
+            ATK dele for reduzido a 0 como resultado, destrua-o. Nenhum jogador pode ativar cards ou efeitos em resposta
+            à ativação deste card.
+          </p>
+          <div class="informacoes-ataque">
+            <span>ATK/ X000</span>
+            <span>DEF/ X000</span>
+          </div>
+        </div>
+      </li>
+
+      <!-- 6 -->
+      <li class="cartao fundo-6">
+        <div class="carta-virada"></div>
+        <h2 class="nome">Mago do Caos das Trevas</h2>
+
+        <div class="nivel-carta">
+          <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span><span
+            class="estrela"></span><span class="estrela"></span><span class="estrela"></span><span
+            class="estrela"></span><span class="estrela"></span>
+        </div>
+
+        <img src="./src/imagens/MagoCaos.png" alt="Mago do Caos das Trevas" class="imagem-carta" />
+
+        <div class="informacoes">
+          <p class="descricao">
+            Um mago lendário que domina as forças do caos. Seu poder é superado apenas por sua habilidade em manipular
+            as trevas.
+          </p>
+          <div class="informacoes-ataque">
+            <span>ATK/ 2800</span>
+            <span>DEF/ 2600</span>
+          </div>
+        </div>
+      </li>
+
+      <!-- 7 -->
+      <li class="cartao fundo-7">
+        <div class="carta-virada"></div>
+        <h2 class="nome">Pequena Maga Negra</h2>
+
+        <div class="nivel-carta">
+          <span class="estrela"></span><span class="estrela"></span><span class="estrela"></span><span
+            class="estrela"></span><span class="estrela"></span><span class="estrela"></span>
+        </div>
+
+        <img src="./src/imagens/Maga.png" alt="Pequena Maga Negra" class="imagem-carta" />
+
+        <div class="informacoes">
+          <p class="descricao">
+            Ela é a aprendiz do Mago Negro e demonstra grande potencial com seus poderes mágicos.
+          </p>
+          <div class="informacoes-ataque">
+            <span>ATK/ 2000</span>
+            <span>DEF/ 1700</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <button class="btn-seta bnt-avancar" id="btn-avancar">
+      <img src="./src/imagens/seta.png" alt="seta avançar" />
+    </button>
   </main>
 
   <script src="./js/index.js"></script>
 </body>
+
 </html>
