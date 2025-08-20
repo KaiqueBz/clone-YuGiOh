@@ -21,7 +21,7 @@ Ele exibe um **slider interativo de cartas**, onde o usuário pode navegar entre
 ---
 
 ## 📷 Demonstração
-👉 [Acesse o projeto no GitHub Pages](https://kaiquebz.github.io/clone-YuGiOh/)  
+👉 [Acesse o projeto no GitHub Pages]([https://kaiquebz.github.io/clone-YuGiOh/](https://kaiquebz.github.io/clone-YuGiOh/)  
 
 ![Prévia do projeto](./src/imagens/1740487702663.jpeg)
 
