@@ -1,33 +1,37 @@
-// Seleciona os elementos necessários
-const btnAvancar = document.querySelector(".btn-avancar");
-const btnVoltar = document.querySelector(".btn-voltar");
+// Seleciona os elementos principais
+const btnAvancar = document.getElementById("btn-avancar");
+const btnVoltar = document.getElementById("btn-voltar");
 const cartoes = document.querySelectorAll(".cartao");
 
-let cartaoAtual = 0; // começa na primeira carta
+let cartaoAtual = 0;
 
 // Função para esconder o cartão selecionado
 function esconderCartaoSelecionado() {
-  const cartaoSelecionado = document.querySelector(".selecionado");
+  const cartaoSelecionado = document.querySelector(".cartao.selecionado");
   cartaoSelecionado.classList.remove("selecionado");
 }
 
-// Função para mostrar o cartão na posição correta
+// Função para mostrar o cartão
 function mostrarCartao(indiceCartao) {
   cartoes[indiceCartao].classList.add("selecionado");
 }
 
-// Evento botão avançar
+// Avançar
 btnAvancar.addEventListener("click", function () {
-  if (cartaoAtual === cartoes.length - 1) return; // já está no último
+  if (cartaoAtual === cartoes.length - 1) return;
+
   esconderCartaoSelecionado();
+
   cartaoAtual++;
   mostrarCartao(cartaoAtual);
 });
 
-// Evento botão voltar
+// Voltar
 btnVoltar.addEventListener("click", function () {
-  if (cartaoAtual === 0) return; // já está no primeiro
+  if (cartaoAtual === 0) return;
+
   esconderCartaoSelecionado();
+
   cartaoAtual--;
   mostrarCartao(cartaoAtual);
 });
