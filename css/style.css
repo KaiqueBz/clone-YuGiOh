@@ -1,103 +1,200 @@
 body {
-  font-family: "Beleren", serif;
-  margin: 0;
-  padding: 0;
-  background: url("../src/imagens/fundo-1.jpg") no-repeat center center fixed;
-  background-size: cover;
+    font-family: 'Yugioh, serif';
+    background-image: url(./src/imagens/yugiohimg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 30px;
 }
 
-h1 {
-  text-align: center;
-  margin: 20px 0;
-  font-size: 2rem;
-  color: #000;
+.cabecalho {
+    display: flex;
+    justify-content: center;
 }
 
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 90vh;
-  position: relative;
+.cabecalho .titulo {
+    color: #000000;
 }
 
 .cartao {
-  background: url("../src/imagens/fundo-carta.jpg") no-repeat center center;
-  background-size: cover;
-  border: 2px solid #000;
-  border-radius: 10px;
-  padding: 10px;
-  width: 300px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  text-align: center;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 5px;
+    position: absolute;
+}
+
+.cartao.selecionado {
+    opacity: 1;
+    z-index: 1;
+}
+
+.lista-personagens {
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    position: relative;
+    padding: 12px;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+}
+
+.cartao .nome {
+    font-size: 13px;
+    padding: 5px;
+    text-transform: uppercase;
+    background: radial-gradient(circle, #f3e2c8, #e4cfa5, #c4a57a);
+    border: 2px solid #a67c52;
+    line-height: 1.5;
+    border-radius: 4px;
+}
+
+.cartao .estrela {
+    width: 20px;
+    height: 20px;
+    background-image: url(./src/imagens/nivel-carta.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.cartao .nivel-carta {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    gap: 5px;
+}
+
+.cartao .imagem-carta {
+    max-width: 260px;
+    align-self: center;
+    border-radius: 5px;
 }
 
 .cartao .informacoes {
-  background: #e0c28e;
-  border: 2px solid #000;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 5px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  text-transform: uppercase;
+    border-radius: 5px;
+    max-width: 300px;
+    color: #000000;
+    background: radial-gradient(circle, #f3e2c8, #e4cfa5, #c4a57a);
+    border: 2px solid #a67c52;
+    text-align: left;
+    line-height: 1.5;
+    padding: 5px;
 }
 
-.cartao img {
-  width: 100%;
-  border: 2px solid #000;
-  border-radius: 5px;
-  margin-bottom: 10px;
+.cartao .informacoes .informacoes-ataque {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 10px;
 }
 
-.cartao .descricao {
-  background: #e0c28e;
-  border: 2px solid #000;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 0.9rem;
-  text-align: justify;
-  height: 120px;
-  overflow-y: auto;
+.cartao .informacoes .informacoes-ataque span {
+    font-size: 13px;
 }
 
-.cartao .descricao::-webkit-scrollbar {
-  width: 6px;
+.cartao .informacoes .descricao {
+    border-bottom: 1px solid #000000;
+    padding: 10px;
+    max-height: 95px;
+    overflow-y: scroll;
+    font-size: 13px;
 }
 
-.cartao .descricao::-webkit-scrollbar-thumb {
-  background-color: #b59b6c;
-  border-radius: 3px;
+.fundo-1 {
+    background: url(./src/imagens/fundo-1.jpg) no-repeat;
+}
+.fundo-2 {
+    background: url(./src/imagens/fundo-2.jpg) no-repeat;
+}
+.fundo-3 {
+    background: url(./src/imagens/fundo-1.jpg) no-repeat;
+}
+.fundo-4 {
+    background: url(./src/imagens/fundo-3.jpg) no-repeat;
+}
+.fundo-5 {
+    background: url(./src/imagens/fundo-5.jpg) no-repeat;
+}
+.fundo-6 {
+    background: url(./src/imagens/fundo-6.jpg) no-repeat;
+}
+.fundo-7 {
+    background: url(./src/imagens/fundo-7.jpg) no-repeat;
 }
 
-.seta {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease-in-out;
+.btn-seta {
+    background-color: #ffff;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.seta img {
-  width: 25px;
+.btn-seta.btn-voltar {
+    transform: rotateY(180deg);
 }
 
-.seta:hover {
-  transform: scale(1.1);
+.btn-seta:hover {
+    background-color: #8351fe;
 }
 
-.seta.btn-voltar {
-  position: absolute;
-  left: 15%;
+body::-webkit-scrollbar-track {
+    background-color: #c08057;
 }
 
-.seta.btn-avancar {
-  position: absolute;
-  right: 15%;
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c08057;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c08057;
+}
+
+.carta-virada {
+    display: none;
+}
+
+.carta-virada.mostrar-fundo-carta {
+    background-color: red;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(./src/imagens/fundo-carta.jpg);
+    background-size: contain;
+    background-position: center;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.cartao.virar {
+    transform: rotatez(90deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.esconder {
+    display: none;
 }
