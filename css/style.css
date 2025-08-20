@@ -1,111 +1,103 @@
 body {
-  font-family: 'Times New Roman', serif;
-  background: url("../src/imagens/yugiohimg.webp") no-repeat center center fixed;
-  background-size: cover;
+  font-family: "Beleren", serif;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  background: url("../src/imagens/fundo-1.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 h1 {
+  text-align: center;
+  margin: 20px 0;
   font-size: 2rem;
-  margin-bottom: 20px;
   color: #000;
-  text-align: center;
 }
 
-.carousel {
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
   position: relative;
-  width: 300px;
 }
 
-.card {
-  background: #e0c9a6;
+.cartao {
+  background: url("../src/imagens/fundo-carta.jpg") no-repeat center center;
+  background-size: cover;
   border: 2px solid #000;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 10px;
+  width: 300px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.card h2 {
-  font-size: 1rem;
-  margin: 5px 0;
-  font-weight: bold;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
+.cartao .informacoes {
+  background: #e0c28e;
+  border: 2px solid #000;
   border-radius: 5px;
-  margin: 10px 0;
-}
-
-.card p {
-  font-size: 0.9rem;
-  margin: 10px 0;
+  margin-bottom: 10px;
   padding: 5px;
-  background: #f5e6c8;
-  border-radius: 5px;
-  text-align: justify;
-  overflow-y: auto;
-  max-height: 100px;
-}
-
-.card .stats {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: bold;
-  margin-top: 10px;
+  text-transform: uppercase;
 }
 
-button {
+.cartao img {
+  width: 100%;
+  border: 2px solid #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.cartao .descricao {
+  background: #e0c28e;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 0.9rem;
+  text-align: justify;
+  height: 120px;
+  overflow-y: auto;
+}
+
+.cartao .descricao::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cartao .descricao::-webkit-scrollbar-thumb {
+  background-color: #b59b6c;
+  border-radius: 3px;
+}
+
+.seta {
   background: #fff;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  width: 40px;
-  height: 40px;
-  font-size: 1.5rem;
-  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
 }
 
-button:hover {
+.seta img {
+  width: 25px;
+}
+
+.seta:hover {
   transform: scale(1.1);
 }
 
-button:active {
-  transform: scale(0.95);
-}
-
-.prev, .next {
+.seta.btn-voltar {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 15%;
 }
 
-.prev {
-  left: -60px;
-}
-
-.next {
-  right: -60px;
-}
-
-/* Fundos */
-.fundo-1 { background: url("../src/imagens/fundo-1.jpg") no-repeat center/cover; }
-.fundo-2 { background: url("../src/imagens/fundo-2.jpg") no-repeat center/cover; }
-.fundo-3 { background: url("../src/imagens/fundo-3.jpg") no-repeat center/cover; }
-.fundo-4 { background: url("../src/imagens/fundo-4.jpg") no-repeat center/cover; }
-.fundo-5 { background: url("../src/imagens/fundo-5.jpg") no-repeat center/cover; }
-.fundo-6 { background: url("../src/imagens/fundo-6.jpg") no-repeat center/cover; }
-.fundo-7 { background: url("../src/imagens/fundo-7.jpg") no-repeat center/cover; }
-
-/* Fundo da carta virada */
-.carta-virada.mostrar-fundo-carta {
-  background-image: url("../src/imagens/fundo-carta.jpg");
+.seta.btn-avancar {
+  position: absolute;
+  right: 15%;
 }
