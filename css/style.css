@@ -1,6 +1,6 @@
 body{
     font-family: 'Yugioh, serif';
-    background-image: url(./src/imagens/yugiohimg.webp);
+    background-image: url(../src/imagens/yugiohimg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -111,13 +111,13 @@ body{
 }
 
 .fundo-1{
-    background: url(.im/imagens/fundo-1.jpg) no-repeat;
+    background: url(../src/imagens/fundo-1.jpg) no-repeat;
 }
 .fundo-2{
-    background: url(./img/imagens/fundo-2.jpg) no-repeat;
+    background: url(../src/imagens/fundo-2.jpg) no-repeat;
 }
 .fundo-3{
-    background: url(./src/imagens/fundo-1.jpg) no-repeat;
+    background: url(../src/imagens/fundo-1.jpg) no-repeat;
 }
 .fundo-4{
     background: url(../src/imagens/fundo-3.jpg) no-repeat;
