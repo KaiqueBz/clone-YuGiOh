@@ -1,154 +1,170 @@
-/* ---------- RESET BÁSICO ---------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: url("./src/imagens/yugiohimg.webp") no-repeat center center fixed;
+  font-family: 'Yugioh, serif';
+  background-image: url(../src/imagens/yugiohimg.webp);
+  background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-
-/* ---------- TÍTULO ---------- */
-.titulo {
-  text-align: center;
-  padding: 20px;
-}
-
-.titulo h1 {
-  font-size: 2rem;
-  color: #fff;
-  text-shadow: 2px 2px 6px #000;
-}
-
-/* ---------- CARROSSEL ---------- */
-.carrossel {
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
-  min-height: 100vh;
-  padding: 20px;
-}
-
-/* ---------- LISTA DE CARTAS ---------- */
-.lista-cartas {
-  list-style: none;
-  position: relative;
-  width: 380px;
-  height: 540px;
-}
-
-/* ---------- CARTÃO ---------- */
-.cartao {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 360px;
-  height: 520px;
-  border-radius: 12px;
-  background: rgba(245, 222, 179, 0.95); /* tom bege estilo carta Yu-Gi-Oh */
-  padding: 15px;
-  display: none;
   flex-direction: column;
-  align-items: center;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.7);
-  transition: opacity 0.3s ease-in-out;
-  overflow: hidden;
-  border: 2px solid #000;
+  min-height: 100vh;
+  gap: 30px;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: center;
+}
+
+.cabecalho .titulo {
+  color: #000000;
+}
+
+.cartao {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 5px;
+  position: absolute;
 }
 
 .cartao.selecionado {
-  display: flex;
+  opacity: 1;
+  z-index: 1;
 }
 
-/* ---------- CONTEÚDO DO CARTÃO ---------- */
-.nome {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 8px;
-  text-align: center;
+.lista-personagens {
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  position: relative;
+  padding: 12px;
 }
 
-.nivel {
+.slider {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
+  align-items: center;
+  gap: 130px;
 }
 
-.nivel img {
-  width: 22px;
-  margin: 1px;
+.cartao .nome {
+  font-size: 13px;
+  padding: 5px;
+  text-transform: uppercase;
+  background: radial-gradient(circle, #f3e2c8, #e4cfa5, #c4a57a);
+  border: 2px solid #a67c52;
+  line-height: 1.5;
+  border-radius: 4px;
 }
 
-/* Imagem central da carta */
-.imagem-carta {
-  width: 200px;
-  border-radius: 6px;
-  margin: 10px 0;
-  border: 2px solid #000;
+.cartao .estrela {
+  width: 20px;
+  height: 20px;
+  background-image: url(../src/imagens/nivel-carta.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
 }
 
-/* Texto da carta */
-.descricao {
-  font-size: 0.9rem;
-  text-align: center;
-  margin-top: auto;
-  padding: 8px;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 6px;
-  color: #111;
-  font-style: italic;
+.cartao .nivel-carta {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  gap: 5px;
 }
 
-/* ATK e DEF */
-.atk-def {
-  margin-top: 6px;
-  font-weight: bold;
-  color: #000;
-  text-shadow: 1px 1px 2px #fff;
+.cartao .imagem-carta {
+  max-width: 260px;
+  align-self: center;
+  border-radius: 5px;
 }
 
-/* ---------- BOTÕES ---------- */
+.cartao .informacoes {
+  border-radius: 5px;
+  max-width: 300px;
+  color: #000000;
+  background: radial-gradient(circle, #f3e2c8, #e4cfa5, #c4a57a);
+  border: 2px solid #a67c52;
+  text-align: left;
+  line-height: 1.5;
+  padding: 5px;
+}
+
+.cartao .informacoes .informacoes-ataque {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  padding: 10px;
+}
+
+.cartao .informacoes .informacoes-ataque span {
+  font-size: 13px;
+}
+
+.cartao .informacoes .descricao {
+  border-bottom: 1px solid #000000;
+  padding: 10px;
+  max-height: 95px;
+  overflow-y: scroll;
+  font-size: 13px;
+}
+
+.fundo-1 { background: url(../src/imagens/fundo-1.jpg) no-repeat; }
+.fundo-2 { background: url(../src/imagens/fundo-2.jpg) no-repeat; }
+.fundo-3 { background: url(../src/imagens/fundo-1.jpg) no-repeat; }
+.fundo-4 { background: url(../src/imagens/fundo-3.jpg) no-repeat; }
+.fundo-5 { background: url(../src/imagens/fundo-5.jpg) no-repeat; }
+.fundo-6 { background: url(../src/imagens/fundo-6.jpg) no-repeat; }
+.fundo-7 { background: url(../src/imagens/fundo-7.jpg) no-repeat; }
+
 .btn-seta {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  background-color: #ffff;
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50px;
+  border: 0;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
-  transition: transform 0.2s ease-in-out;
-  z-index: 10;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+}
+
+.btn-seta.btn-voltar {
+  transform: rotateY(180deg);
 }
 
 .btn-seta:hover {
-  transform: translateY(-50%) scale(1.1);
+  background-color: #8351fe;
 }
 
-.btn-seta img {
-  width: 24px;
-  height: 24px;
+body::-webkit-scrollbar-track { background-color: #c08057; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { background: #c08057; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #c08057; }
+
+.carta-virada { display: none; }
+
+.carta-virada.mostrar-fundo-carta {
+  background-color: red;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url(../src/imagens/fundo-carta.jpg);
+  background-size: contain;
+  background-position: center;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  z-index: 2;
 }
 
-.btn-voltar {
-  left: -70px;
+.cartao.virar {
+  transform: rotatez(90deg);
+  transition: transform 0.3s ease-in-out;
 }
 
-.btn-avancar {
-  right: -70px;
-}
+.esconder { display: none; }
