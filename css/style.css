@@ -1,6 +1,6 @@
 body {
     font-family: 'Yugioh, serif';
-    background-image: url(../imagens/yugiohimg.webp);
+    background-image: url(../src/imagens/yugiohimg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -61,7 +61,7 @@ body {
 .cartao .estrela {
     width: 20px;
     height: 20px;
-    background-image: url(../imagens/nivel-carta.png);
+    background-image: url(../src/imagens/nivel-carta.png);
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
@@ -110,27 +110,13 @@ body {
     font-size: 13px;
 }
 
-.fundo-1 {
-    background: url(../imagens/fundo-1.jpg) no-repeat;
-}
-.fundo-2 {
-    background: url(../imagens/fundo-2.jpg) no-repeat;
-}
-.fundo-3 {
-    background: url(../imagens/fundo-1.jpg) no-repeat;
-}
-.fundo-4 {
-    background: url(../imagens/fundo-3.jpg) no-repeat;
-}
-.fundo-5 {
-    background: url(../imagens/fundo-5.jpg) no-repeat;
-}
-.fundo-6 {
-    background: url(../imagens/fundo-6.jpg) no-repeat;
-}
-.fundo-7 {
-    background: url(../imagens/fundo-7.jpg) no-repeat;
-}
+.fundo-1 { background: url(../src/imagens/fundo-1.jpg) no-repeat; }
+.fundo-2 { background: url(../src/imagens/fundo-2.jpg) no-repeat; }
+.fundo-3 { background: url(../src/imagens/fundo-1.jpg) no-repeat; }
+.fundo-4 { background: url(../src/imagens/fundo-3.jpg) no-repeat; }
+.fundo-5 { background: url(../src/imagens/fundo-5.jpg) no-repeat; }
+.fundo-6 { background: url(../src/imagens/fundo-6.jpg) no-repeat; }
+.fundo-7 { background: url(../src/imagens/fundo-7.jpg) no-repeat; }
 
 .btn-seta {
     background-color: #ffff;
@@ -154,26 +140,12 @@ body {
     background-color: #8351fe;
 }
 
-body::-webkit-scrollbar-track {
-    background-color: #c08057;
-}
+body::-webkit-scrollbar-track { background-color: #c08057; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { background: #c08057; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #c08057; }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #c08057;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #c08057;
-}
-
-.carta-virada {
-    display: none;
-}
+.carta-virada { display: none; }
 
 .carta-virada.mostrar-fundo-carta {
     background-color: red;
@@ -181,7 +153,7 @@ body::-webkit-scrollbar-track {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url(../imagens/fundo-carta.jpg);
+    background-image: url(../src/imagens/fundo-carta.jpg);
     background-size: contain;
     background-position: center;
     top: 0;
@@ -195,6 +167,4 @@ body::-webkit-scrollbar-track {
     transition: transform 0.3s ease-in-out;
 }
 
-.esconder {
-    display: none;
-}
+.esconder { display: none; }
